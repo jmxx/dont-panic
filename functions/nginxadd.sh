@@ -22,8 +22,13 @@ nginxadd() {
   echo "Creating /etc/nginx/sites-available/${CONFIG_FILE}"
   sudo -- sh -c "echo '$NGINX_ADD_BLOCK' > /etc/nginx/sites-available/${CONFIG_FILE}"
 
-  echo "Creating symlink at /etc/nginx/sites-enabled/${CONFIG_FILE}"
-  sudo ln -fs "/etc/nginx/sites-available/${CONFIG_FILE}" "/etc/nginx/sites-enabled/${CONFIG_FILE}"
+  if [ -f "/etc/nginx/sites-available/${CONFIG_FILE}" ]; then
+    echo "Creating symlink at /etc/nginx/sites-enabled/${CONFIG_FILE}"
+    sudo ln -fs "/etc/nginx/sites-available/${CONFIG_FILE}" "/etc/nginx/sites-enabled/${CONFIG_FILE}"
+  else
+    echo "/etc/nginx/sites-available/${CONFIG_FILE} does not exists. Exiting"
+    return
+  fi
 
   echo "Adding ${SERVER_NAME} to /etc/hosts"
   sudo -- sh -c "echo \"127.0.0.1\t${SERVER_NAME}\" >> /etc/hosts"
