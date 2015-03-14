@@ -1,0 +1,35 @@
+{
+  // Details: https://github.com/victorporof/Sublime-JSHint#using-your-own-jshintrc-options
+  // Example: https://github.com/jshint/jshint/blob/master/examples/.jshintrc
+  // Documentation: http://www.jshint.com/docs/
+
+  // Enforcing options
+  "camelcase": true,
+  "eqeqeq": true,
+  "forin": true,
+  "indent": 2,
+  "noarg": true,
+  "undef": true,
+  "unused": "vars",
+  "strict": true,
+  "trailing": true,
+  "maxparams": 4,
+  "quotmark": true,
+
+  //Relaxing options
+  //"esnext": true,
+  "evil": false,
+  "expr": true,
+  //"globalstrict": true,
+  "laxcomma": true,
+  //"smarttabs": true,
+
+  // Environments
+  "browser": true,
+  "devel": true,
+  "jquery": true,
+  "node":true,
+
+  "globals": {}
+
+}

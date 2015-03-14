@@ -1,0 +1,6 @@
+alias p="cd ~/Projects"
+alias dl="cd ~/Downloads"
+
+# Pretty print the path
+# https://github.com/thoughtbot/dotfiles/blob/master/aliases
+alias path='echo $PATH | tr -s ":" "\n"'
