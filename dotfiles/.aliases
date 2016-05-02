@@ -4,3 +4,16 @@ alias dl="cd ~/Downloads"
 # Pretty print the path
 # https://github.com/thoughtbot/dotfiles/blob/master/aliases
 alias path='echo $PATH | tr -s ":" "\n"'
+
+# Git aliases
+alias gs='git status'
+alias gss='git status -s'
+alias gssb='git status -sb'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gl='git log'
+alias glog='git log --pretty=format:"%h %s" --graph'
+alias gsta='git stash'
+alias gstap='git stash pop'
+alias gstal='git stash list'
+alias gstad='git stash drop'

@@ -37,7 +37,7 @@ wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - 
 # Install NVM
 # https://github.com/creationix/nvm#install-script
 echo "Installing NVM"
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | sh
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | sh
 
 # We install Google Chrome
 echo "Installing Google Chrome"
